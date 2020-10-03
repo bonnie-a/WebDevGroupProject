@@ -21,10 +21,10 @@ div.board {
     border: 10px solid black;
     margin: auto;
     width: 1000px;
+    background-color: #d9d9d9;
 }
 
 div.box {
-    background-color: #d9d9d9;
     border: 1px solid black;
 }
 
@@ -36,8 +36,30 @@ div.box {
 #end {
     background-image: url(./resources/crown2.png);
     background-repeat: no-repeat;
+    animation-name: goal;
+    animation-iteration-count: infinite;
+    animation-duration: 2s;
 }
 
 div.wall {
     background-color: #000000;
+}
+
+div.box:hover {
+    background-image: url(./resources/character.png);
+    animation-name: character;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+    border: none;
+}
+
+@keyframes character {
+    0% {opacity: 0; transform: translateX(-50px);}
+    100% {opacity: 1; transform: translateX(0);}
+}
+
+@keyframes goal {
+    0%   {background-color: yellow;}
+    50%  {background-color: green;}
+    100% {background-color: yellow;}
 }
