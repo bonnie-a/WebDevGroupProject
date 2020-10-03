@@ -1,0 +1,43 @@
+body {
+    margin: 0px;
+    padding: 0px;
+    background-color: #a0b285;
+    font-family: Impact;
+    text-align: center;
+}
+
+.banner {
+    height: 10%;
+    background-image: url(./resources/banner.jpg);
+    font-size: 36pt;
+    letter-spacing: 5px;
+}
+
+div.board {
+    justify-content: center;
+    display: grid;
+    grid-template-columns: 100px 100px 100px 100px 100px 100px 100px 100px 100px 100px;
+    grid-template-rows: 100px 100px 100px 100px 100px 100px;
+    border: 10px solid black;
+    margin: auto;
+    width: 1000px;
+}
+
+div.box {
+    background-color: #d9d9d9;
+    border: 1px solid black;
+}
+
+#start {
+    background-image: url(./resources/home.png);
+    background-repeat: no-repeat;
+}
+
+#end {
+    background-image: url(./resources/crown2.png);
+    background-repeat: no-repeat;
+}
+
+div.wall {
+    background-color: #000000;
+}
