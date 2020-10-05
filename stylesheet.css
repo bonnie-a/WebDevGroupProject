@@ -43,6 +43,10 @@ div.box {
 
 div.wall {
     background-color: #000000;
+} 
+
+div.forest {
+    background-image: url(./resources/forest.jpeg);
 }
 
 div.box:hover {
