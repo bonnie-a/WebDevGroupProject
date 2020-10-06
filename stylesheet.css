@@ -31,6 +31,7 @@ div.box {
 #start {
     background-image: url(./resources/home.png);
     background-repeat: no-repeat;
+    animation-name: none;
 }
 
 #end {
@@ -41,12 +42,9 @@ div.box {
     animation-duration: 2s;
 }
 
-div.wall {
-    background-color: #000000;
-} 
-
 div.forest {
-    background-image: url(./resources/forest.jpeg);
+    background-image: url(./resources/forest2.jpg);
+    background-repeat: no-repeat;
 }
 
 div.box:hover {
@@ -55,6 +53,17 @@ div.box:hover {
     animation-duration: 3s;
     animation-fill-mode: forwards;
     border: none;
+}
+
+.coin {
+    background-image: url(./resources/coin.png);
+    height: 80px;
+    background-repeat: no-repeat;
+    margin-top: 15px;
+    margin-left: 10px;
+    animation-name: coin;
+    animation-iteration-count: infinite;
+    animation-duration: 3s;
 }
 
 @keyframes character {
@@ -66,4 +75,9 @@ div.box:hover {
     0%   {background-color: yellow;}
     50%  {background-color: green;}
     100% {background-color: yellow;}
+}
+
+@keyframes coin {
+    0% {transform: rotateY(0deg);}
+    100% {transform: rotateY(359deg);}
 }
