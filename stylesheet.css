@@ -42,9 +42,67 @@ div.box {
     animation-duration: 2s;
 }
 
+div.wall {
+    background-color: #000000;
+}
+
 div.forest {
-    background-image: url(./resources/forest2.jpg);
+    background-image: url(./resources/forest2.png);
     background-repeat: no-repeat;
+}
+
+div.desert {
+    background-image: url(./resources/desert.png);
+    background-repeat: no-repeat;
+}
+
+div.oasis {
+    background-image: url(./resources/oasis.png);
+    background-repeat: no-repeat;
+}
+
+div.hills {
+    background-image: url(./resources/hills.png);
+    background-repeat: no-repeat;
+}
+
+div.valley {
+    background-image: url(./resources/valley.png);
+    background-repeat: no-repeat;
+}
+
+div.waterfall {
+    background-image: url(./resources/waterfall.png);
+    background-repeat: no-repeat;
+}
+
+div.mountain {
+    background-image: url(./resources/stone.png);
+    background-repeat: no-repeat;
+}
+
+div.trap {
+    background-image: url(./resources/trap.png);
+    background-repeat: no-repeat;
+}
+
+div.tower {
+    background-image: url(./resources/stone-tower.png);
+    background-repeat: no-repeat;
+}
+
+div.secretdoor {
+    background-image: url(./resources/secret-door.png);
+    background-repeat: no-repeat;
+}
+
+div.diceOne {
+    background-image: url(./resources/perspective-dice-one.png);
+    background-repeat: no-repeat;
+}
+
+div.diceFour{
+    background-image: url(./resources/perspective-dice-four.png);
 }
 
 div.box:hover {
