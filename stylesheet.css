@@ -19,7 +19,9 @@ div.board {
     grid-template-columns: 100px 100px 100px 100px 100px 100px 100px 100px 100px 100px;
     grid-template-rows: 100px 100px 100px 100px 100px 100px;
     border: 10px solid black;
-    margin: auto;
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
     width: 1000px;
     background-color: #d9d9d9;
 }
@@ -109,6 +111,50 @@ div.box:hover {
     border: none;
 }
 
+.scorebox{
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10px;
+    width: 500px;
+    border: 10px solid black;
+    background-color: darkgreen;
+    color: black;
+    padding: 0px;
+}
+
+h1{
+    font-size: 25pt;
+    font-weight: bold;
+}
+
+h2{
+    font-size: 18pt;
+    font-weight: bold;
+}
+
+.scores{
+    line-height: .5;
+    margin-bottom: 35px;
+}
+
+.time{
+    font-size: 20pt;
+    color: red;
+}
+
+.lives{
+    width: 50px;
+    height: auto;
+    margin-left: 10px;
+}
+
+hr{
+    width: 75%;
+    border-width: 5px;
+    border-color: black;
+}
+  
 .coin {
     background-image: url(./resources/coin.png);
     height: 80px;
