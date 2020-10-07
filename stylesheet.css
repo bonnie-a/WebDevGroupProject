@@ -42,10 +42,6 @@ div.box {
     animation-duration: 2s;
 }
 
-div.wall {
-    background-color: #000000;
-}
-
 div.forest {
     background-image: url(./resources/forest.png);
     background-repeat: no-repeat;
