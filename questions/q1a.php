@@ -16,7 +16,7 @@
         Jeopardy
     </div>
     
-    <h1>This is the question...</h1>
+    <h1>This is a testing of machine's ability, to see if it's intelligent behavior is equivalent or indistinguishable from a human being.</h1>
     
     <br><br>
 
@@ -25,7 +25,7 @@
             <b>Answer:</b> 
         </div>
         <input name="answer" type="text" size="20">
-        <input type="hidden" name="correct" value="This is the correct answer">
+        <input type="hidden" name="correct" value="Turing test">
         <input type="hidden" name="points" value="100">
         <input type="submit" value="Submit Answer">
     </form>
