@@ -33,10 +33,10 @@
         <div class = box><a href = ./questions/q3b.php>$200</a></div>
         <div class = box><a href = ./questions/q4b.php>$200</a></div>
         
-        <div class = box><a href = ./questions/q1b.php>$300</a></div>
-        <div class = box><a href = ./questions/q2b.php>$300</a></div>
-        <div class = box><a href = ./questions/q3b.php>$300</a></div>
-        <div class = box><a href = ./questions/q4b.php>$300</a></div>
+        <div class = box><a href = ./questions/q1c.php>$300</a></div>
+        <div class = box><a href = ./questions/q2c.php>$300</a></div>
+        <div class = box><a href = ./questions/q3c.php>$300</a></div>
+        <div class = box><a href = ./questions/q4c.php>$300</a></div>
         
         <div class = box><a href = ./questions/q1d.php>$400</a></div>
         <div class = box><a href = ./questions/q2b.php>$400</a></div>
