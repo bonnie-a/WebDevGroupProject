@@ -18,10 +18,10 @@
     </div>
 
     <div class = board>
-        <div class = category>Category 1</div>
-        <div class = category>Category 2</div>
-        <div class = category>Category 3</div>
-        <div class = category>Category 4</div>
+        <div class = category>Computer Science</div>
+        <div class = category>World History</div>
+        <div class = category>Animals</div>
+        <div class = category>Art</div>
         
         <div class = box><a href = ./questions/q1a.php>$100</a></div>
         <div class = box><a href = ./questions/q2a.php>$100</a></div>
@@ -39,7 +39,7 @@
         <div class = box><a href = ./questions/q4c.php>$300</a></div>
         
         <div class = box><a href = ./questions/q1d.php>$400</a></div>
-        <div class = box><a href = ./questions/q2b.php>$400</a></div>
+        <div class = box><a href = ./questions/q2d.php>$400</a></div>
         <div class = box><a href = ./questions/q3d.php>$400</a></div>
         <div class = box><a href = ./questions/q4d.php>$400</a></div>
     </div>
