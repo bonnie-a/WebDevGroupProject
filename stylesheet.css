@@ -43,6 +43,9 @@ a {
     color: black;
 }
 
+a.quest:visited{
+    color: #060CE9;
+}
 
 h1{
     font-size: 25pt;

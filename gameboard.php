@@ -1,6 +1,5 @@
 <?php
     setcookie ("username",$_POST["username"],time()+ 86400 / 24);
-    
 ?>
 <!DOCTYPE html>
 
@@ -23,35 +22,30 @@
         <div class = category>Animals</div>
         <div class = category>Art</div>
         
-        <div class = box><a href = ./questions/q1a.php>$100</a></div>
-        <div class = box><a href = ./questions/q2a.php>$100</a></div>
-        <div class = box><a href = ./questions/q3a.php>$100</a></div>
-        <div class = box><a href = ./questions/q4a.php>$100</a></div>
+        <div class = box><a class = quest href = ./questions/q1a.php>$100</a></div>
+        <div class = box><a class = quest href = ./questions/q2q.php>$100</a></div>
+        <div class = box><a class = quest href = ./questions/q3a.php>$100</a></div>
+        <div class = box><a class = quest href = ./questions/q4a.php>$100</a></div>
         
-        <div class = box><a href = ./questions/q1b.php>$200</a></div>
-        <div class = box><a href = ./questions/q2b.php>$200</a></div>
-        <div class = box><a href = ./questions/q3b.php>$200</a></div>
-        <div class = box><a href = ./questions/q4b.php>$200</a></div>
+        <div class = box><a class = quest href = ./questions/q1b.php>$200</a></div>
+        <div class = box><a class = quest href = ./questions/q2b.php>$200</a></div>
+        <div class = box><a class = quest href = ./questions/q3b.php>$200</a></div>
+        <div class = box><a class = quest href = ./questions/q4b.php>$200</a></div>
         
-        <div class = box><a href = ./questions/q1c.php>$300</a></div>
-        <div class = box><a href = ./questions/q2c.php>$300</a></div>
-        <div class = box><a href = ./questions/q3c.php>$300</a></div>
-        <div class = box><a href = ./questions/q4c.php>$300</a></div>
+        <div class = box><a class = quest href = ./questions/q1c.php>$300</a></div>
+        <div class = box><a class = quest href = ./questions/q2c.php>$300</a></div>
+        <div class = box><a class = quest href = ./questions/q3c.php>$300</a></div>
+        <div class = box><a class = quest href = ./questions/q4c.php>$300</a></div>
         
-        <div class = box><a href = ./questions/q1d.php>$400</a></div>
-        <div class = box><a href = ./questions/q2d.php>$400</a></div>
-        <div class = box><a href = ./questions/q3d.php>$400</a></div>
-        <div class = box><a href = ./questions/q4d.php>$400</a></div>
+        <div class = box><a class = quest href = ./questions/q1d.php>$400</a></div>
+        <div class = box><a class = quest href = ./questions/q2d.php>$400</a></div>
+        <div class = box><a class = quest href = ./questions/q3d.php>$400</a></div>
+        <div class = box><a class = quest href = ./questions/q4d.php>$400</a></div>
     </div>
     
     <div class="scorebox">
         <div class="scores">
-            <h1><?php echo $_COOKIE["username"]?></h1>
-            <hr>
-        </div>
-
-        <div class="scores">
-            <?php echo $_COOKIE["score"]?>
+            <h1><?php echo $_COOKIE["score"]?></h1>
         </div>
     </div>
     
