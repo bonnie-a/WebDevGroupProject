@@ -26,7 +26,7 @@
         </div>
         <input name="answer" type="text" size="20">
         <input type="hidden" name="correct" value="The Enlightenment Era">
-        <input type="hidden" name="points" value="100">
+        <input type="hidden" name="points" value="400">
         <input type="submit" value="Submit Answer">
     </form>
     
