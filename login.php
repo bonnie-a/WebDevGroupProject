@@ -1,3 +1,6 @@
+<?php
+    setcookie("username", "", time()-3600);
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -18,7 +21,7 @@
 		Username: <input name="username" type="text" value="<?php if(isset($_COOKIE["username"])) { echo $_COOKIE["username"]; } ?>" class="input-field">
         <?php
             setcookie ("score",0,time()+ 1800);
-            setcookie ("username","null",time()+ 1800);
+            setcookie ("username","",time()+ 1800);
         ?>
         
         <input type="submit" value="Login">

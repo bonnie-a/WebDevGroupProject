@@ -50,7 +50,7 @@
         ?>
     </div>
     
-    <?php echo ("Your final score was: $" . $_COOKIE['score'] . "<br>"); ?>
+    <?php echo ("Your final score was: $" . $_COOKIE['score'] . "<br>");?>
     
     <div>
         <a href=./login.php>Play Again?</a>

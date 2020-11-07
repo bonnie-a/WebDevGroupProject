@@ -52,9 +52,11 @@
         <div class="scores">
             <h1><?php echo "$" . $_COOKIE["score"]?></h1>
         </div>
+        
+        <div class="scores">
+            <a href=./leaderboard.php>Submit your score</a>
+        </div>
     </div>
-    <br>
-    <a href=./leaderboard.php>Submit your score</a>
-    <br>
+
 </body>
 </html>
