@@ -1,12 +1,3 @@
-<?php
-    /*$earned = 0;
-    if(strcasecmp($_POST['answer'], $_COOKIE['correct']) == 0){
-        $earned = $_COOKIE['points'];
-    }
-    setcookie ("score",$_COOKIE["score"]+$earned,time()+ 86400 / 24);
-    echo("<br>You earned $" . $earned);*/
-?>
-    
 <!DOCTYPE html>
 <html lang="en">
 <head>

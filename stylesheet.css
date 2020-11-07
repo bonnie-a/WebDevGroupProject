@@ -25,26 +25,22 @@ div.board {
     background-color: #060CE9;
 }
 
-div.box {
+a {
+    color: black;
+}
+
+.box {
     border: 2px solid black;
     font-size: 24pt;
+}
+
+.box:visited{
+    color: #060CE9;
 }
 
 div.category {
     font-weight: bold;
     border: 3px solid black;
-}
-
-div.box:hover {
-    background-color: #4245ff;
-}
-
-a {
-    color: black;
-}
-
-a.quest:visited{
-    color: #060CE9;
 }
 
 h1{

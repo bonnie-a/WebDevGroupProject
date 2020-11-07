@@ -22,25 +22,25 @@
         <div class = category>Animals</div>
         <div class = category>Art</div>
         
-        <div class = box><a class = quest href = ./questions/q1a.php>$100</a></div>
-        <div class = box><a class = quest href = ./questions/q2q.php>$100</a></div>
-        <div class = box><a class = quest href = ./questions/q3a.php>$100</a></div>
-        <div class = box><a class = quest href = ./questions/q4a.php>$100</a></div>
+        <a class = box href = ./questions/q1a.php>$100</a>
+        <a class = box href = ./questions/q1b.php>$100</a>
+        <a class = box href = ./questions/q1c.php>$100</a>
+        <a class = box href = ./questions/q1d.php>$100</a>
         
-        <div class = box><a class = quest href = ./questions/q1b.php>$200</a></div>
-        <div class = box><a class = quest href = ./questions/q2b.php>$200</a></div>
-        <div class = box><a class = quest href = ./questions/q3b.php>$200</a></div>
-        <div class = box><a class = quest href = ./questions/q4b.php>$200</a></div>
+        <a class = box href = ./questions/q2a.php>$200</a>
+        <a class = box href = ./questions/q2b.php>$200</a>
+        <a class = box href = ./questions/q2c.php>$200</a>
+        <a class = box href = ./questions/q2d.php>$200</a>
         
-        <div class = box><a class = quest href = ./questions/q1c.php>$300</a></div>
-        <div class = box><a class = quest href = ./questions/q2c.php>$300</a></div>
-        <div class = box><a class = quest href = ./questions/q3c.php>$300</a></div>
-        <div class = box><a class = quest href = ./questions/q4c.php>$300</a></div>
+        <a class = box href = ./questions/q3a.php>$300</a>
+        <a class = box href = ./questions/q3b.php>$300</a>
+        <a class = box href = ./questions/q3c.php>$300</a>
+        <a class = box href = ./questions/q3d.php>$300</a>
         
-        <div class = box><a class = quest href = ./questions/q1d.php>$400</a></div>
-        <div class = box><a class = quest href = ./questions/q2d.php>$400</a></div>
-        <div class = box><a class = quest href = ./questions/q3d.php>$400</a></div>
-        <div class = box><a class = quest href = ./questions/q4d.php>$400</a></div>
+        <a class = box href = ./questions/q4a.php>$400</a>
+        <a class = box href = ./questions/q4b.php>$400</a>
+        <a class = box href = ./questions/q4c.php>$400</a>
+        <a class = box href = ./questions/q4d.php>$400</a>
     </div>
     
     <div class="scorebox">
@@ -48,8 +48,8 @@
             <h1><?php echo $_COOKIE["score"]?></h1>
         </div>
     </div>
-    
-    <a href=./leaderboard.php>leaderboard</a>
-    
+    <br>
+    <a href=./leaderboard.php>Submit your score</a>
+    <br>
 </body>
 </html>
