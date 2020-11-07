@@ -1,6 +1,6 @@
 <?php
-    setcookie ("correct","This is the correct answer",time()+ 86400 / 24);
-    setcookie ("points",100,time()+ 86400 / 24);
+    setcookie ("correct","Labrador Retriever",time()+ 86400 / 24, "/");
+    setcookie ("points",100,time()+ 86400 / 24, "/");
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -25,8 +25,6 @@
             <b>Answer:</b> 
         </div>
         <input name="answer" type="text" size="20">
-        <input type="hidden" name="correct" value="Labrador Retriever">
-        <input type="hidden" name="points" value="100">
         <input type="submit" value="Submit Answer">
     </form>
     

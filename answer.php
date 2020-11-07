@@ -13,13 +13,13 @@
     
     <br><br>
     <h2>The correct answer was:</h2><br>
-    <?php echo($_POST['correct']); ?>
+    <?php echo($_COOKIE['correct']); ?>
     
     <br><br>
     <?php
         $earned = 0;
-        if(strcasecmp($_POST['answer'], $_POST['correct']) == 0){
-            $earned = $_POST['points'];
+        if(strcasecmp($_POST['answer'], $_COOKIE['correct']) == 0){
+            $earned = $_COOKIE['points'];
         }
         setcookie ("score",$_COOKIE["score"]+$earned,time()+ 86400 / 24);
         echo("<br>You earned $" . $earned);

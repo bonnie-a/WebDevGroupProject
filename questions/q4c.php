@@ -1,6 +1,6 @@
 <?php
-    setcookie ("correct","This is the correct answer",time()+ 86400 / 24);
-    setcookie ("points",100,time()+ 86400 / 24);
+    setcookie ("correct","Brood parasite",time()+ 86400 / 24, "/");
+    setcookie ("points",400,time()+ 86400 / 24, "/");
 ?>
 <!DOCTYPE html>
 <html lang="en">
