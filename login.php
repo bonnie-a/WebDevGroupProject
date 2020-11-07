@@ -8,9 +8,18 @@
 </head>
 
 <body>
+    <div class="banner">
+        Jeopardy
+    </div>
+    
+    <h1>Welcom to Jeopardy! Please enter a username to play!</h1>
+    
     <form action="gameboard.php" method="post">
 		Username: <input name="username" type="text" value="<?php if(isset($_COOKIE["username"])) { echo $_COOKIE["username"]; } ?>" class="input-field">
-        <?php setcookie ("score",0,time()+ 86400 / 24); ?>
+        <?php
+            setcookie ("score",0,time()+ 1800);
+            setcookie ("username","null",time()+ 1800);
+        ?>
         
         <input type="submit" value="Login">
     </form>

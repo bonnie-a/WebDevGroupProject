@@ -1,5 +1,5 @@
 <?php
-    setcookie ("username",$_POST["username"],time()+ 86400 / 24);
+    setcookie ("username",$_POST["username"],time()+ 1800, "/");
 ?>
 <!DOCTYPE html>
 
@@ -45,7 +45,12 @@
     
     <div class="scorebox">
         <div class="scores">
-            <h1><?php echo $_COOKIE["score"]?></h1>
+            <h1><?php echo $_COOKIE["username"]?></h1>
+            <hr>
+        </div>
+        
+        <div class="scores">
+            <h1><?php echo "$" . $_COOKIE["score"]?></h1>
         </div>
     </div>
     <br>

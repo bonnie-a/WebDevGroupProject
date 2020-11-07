@@ -1,7 +1,9 @@
 <?php
-    $final_score = $_COOKIE['username'] . "," . $_COOKIE['score'];
-    file_put_contents("./leaderboard.txt", $final_score, FILE_APPEND);
+    ini_set('display_errors', 1);
+    $final_score = "\n" . $_COOKIE['username'] . "," . $_COOKIE['score'];
+    file_put_contents("leaderboard.txt", $final_score, FILE_APPEND);
 ?>
+
 <!DOCTYPE html>
 
 <html lang="en">
@@ -28,7 +30,7 @@
                 $line = fgets($file);
                 $info = explode(",", $line);
                 $name = $info[0];
-                $score = $info[1];
+                $score = (int)$info[1];
                 $max["$name"] = $score;
             }
             
@@ -46,6 +48,12 @@
                 echo "<br>";
             }
         ?>
+    </div>
+    
+    <?php echo ("Your final score was: $" . $_COOKIE['score'] . "<br>"); ?>
+    
+    <div>
+        <a href=./login.php>Play Again?</a>
     </div>
     
 </body>
