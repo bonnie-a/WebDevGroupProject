@@ -1,6 +1,0 @@
-Jabari,3300
-Winter,4000
-Zach,3600
-Mak,2800
-Linden,1600
-Jordan,1700
