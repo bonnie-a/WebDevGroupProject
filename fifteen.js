@@ -8,6 +8,13 @@ function endGame() {
 	var timeScore = Math.round((endTime - startTime)/1000);
 	document.getElementById("time").innerHTML = timeScore + " seconds";
 	document.getElementById("moves").innerHTML = moves + " moves";
+	
+	var congratz = document.getElementById("congratz");
+	if(congratz.style.display === "block") {
+		congratz.style.display = "none";
+	} else {
+		congratz.style.display = "block";
+	}
 }
 
 function move(tile) {
