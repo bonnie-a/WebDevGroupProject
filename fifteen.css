@@ -58,16 +58,6 @@ h1,h2 {
 	background-image: url(images/background.png);
 }
 
-.empty {
-    text-align: center;
-	vertical-align: middle;
-    height: 100px;
-    width: 100px;
-    font-size: 32pt;
-    font-family: sans-serif;
-	background-color: white;
-}
-
 .tile:hover {
 	border-color: red;
 	text-decoration: underline;
@@ -118,4 +108,14 @@ h1,h2 {
 }
 #fifteen {
 	background-position: -200px -300px;
+}
+#empty {
+	text-align: center;
+	vertical-align: middle;
+    height: 100px;
+    width: 100px;
+    font-size: 32pt;
+    font-family: sans-serif;
+	background-color: white;
+	background-image: "";
 }
