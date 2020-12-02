@@ -15,6 +15,10 @@
 			The goal of the fifteen puzzle is to un-jumble its fifteen squares by repeatedly making
             moves that slide squares into the empty space. How quickly can you solve it?
 		</p>
+		
+		<p> Time : <span id="time"></span><br>
+			Moves : <span id="move"></span>
+		</p>
 
 		<div class="area">
 			<div class="puzzle">
@@ -24,8 +28,12 @@
 				<div class=tile id=thirteen>13</div> <div class=tile id=fourteen>14</div> <div class=tile id=fifteen>15</div> <div class=empty id=empty></div>
 			</div>
             
-            <div id="button">
-                <button id="shuffle">Shuffle</button>
+            		<div id="button">
+                	<button onclick="startGame()" id="shuffle">Shuffle</button>
+			</div>
+			
+			<div id="button">
+                	<button onclick="endGame()">End</button>
 			</div>
 		</div>
 		
