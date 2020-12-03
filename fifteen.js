@@ -25,17 +25,19 @@ function move(tile) {
     //collect clicked tile info
     var num = tile.innerHTML;
     var pos = tile.style.backgroundPosition;
-    var id = tile.id;
+    var ID = tile.id;
+    
+    var e = document.getElementById("empty");
     
     //collect array positioning info of empty and clicked tile
-    var objPos = POSITIONS.findIndex(element => element.id == id);
-    var emptyPos = POSITIONS.findIndex(element => element.id == "empty");
-    alert("Clicked: " + (objPos + 1) + " " + POSITIONS[objPos].id + " Empty: " + (emptyPos + 1) + " " + POSITIONS[emptyPos].id);
+    var objPos = POSITIONS.findIndex(element => element.id == ID);
+    //var emptyPos = POSITIONS.findIndex(element => element.id == "empty");
+        //alert("Clicked: " + (objPos + 1) + " " + POSITIONS[objPos].id + " Empty: "+ (emptyPos + 1) + " " + POSITIONS[emptyPos].id);
     
     //change empty tile to clicked tile
-    document.getElementById("empty").style.backgroundPosition = pos;
-    document.getElementById("empty").innerHTML = num;
-    document.getElementById("empty").id = id;
+    e.style.backgroundPosition = pos;
+    e.innerHTML = num;
+    e.id = ID;
     
     //change clicked tile to empty tile
     tile.innerHTML = "";
@@ -43,9 +45,11 @@ function move(tile) {
     
     //change positions in the array
     POSITIONS[objPos] = document.getElementById("empty");
-    POSITIONS[emptyPos] = tile;
+    POSITIONS[EMPTY] = e;
     
-    //highlight();
+    EMPTY = objPos;
+    
+    highlight();
 }
 
 /**
@@ -82,33 +86,34 @@ function select() {
  */
 function isMovable(tile) {
     var movable = false;
-    var emp = POSITIONS.findIndex(element => element.id == "empty");
     
-    var pos = POSITIONS.findIndex(element => element.id == tile.id) + 1;
+    var pos = POSITIONS.findIndex(element => element.id == tile.id);
 	var moveRight = pos + 1;
     var moveLeft = pos - 1;
 	var moveUp = pos - 4;
 	var moveDown = pos + 4;
     
-    for (var i in POSITIONS)  {
+    /*for (var i in POSITIONS)  {
         console.log("index " + i);
         console.log("id " + POSITIONS[i].id);
-    }
+    }*/
     
-    if (moveRight < 16 && POSITIONS[moveRight].id == "empty" && pos != 3 && pos != 7 && pos != 11 && pos != 15) {
-        alert("right");
+    console.log("right " + moveRight);
+    console.log("left " + moveLeft);
+    console.log("up " + moveUp);
+    console.log("down " + moveDown);
+    
+    alert(EMPTY);
+    if (moveRight < 16 && moveRight == EMPTY && pos != 3 && pos != 7 && pos != 11 && pos != 15) {
         movable = true;
     }
-    else if (moveLeft > 0 && POSITIONS[moveLeft].id == "empty"  && pos != 0 && pos != 4 && pos != 8 && pos != 12) {
-        alert("left");
+    else if (moveLeft > 0 && moveLeft == EMPTY  && pos != 0 && pos != 4 && pos != 8 && pos != 12) {
         movable = true;
     }
-    else if (moveUp > 0 && POSITIONS[moveUp].id == "empty" && ((pos % 2) != (moveUp % 2))) {
-        alert("up");
+    else if (moveUp > 0 && moveUp == EMPTY ) {
         movable = true;
     }
-    else if (moveDown < 16 && POSITIONS[moveDown].id == "empty" && ((pos % 2) != (moveUp % 2))) {
-        alert("down");
+    else if (moveDown < 16 && moveDown == EMPTY ) {
         movable = true;
     }
     
@@ -131,6 +136,7 @@ function init(){
     POSITIONS = document.getElementsByClassName('tile');
     POSITIONS = Array.from(POSITIONS);
 }
+
 
 function shuffler(){
     tiles = document.getElementsByClassName('tile');
@@ -158,6 +164,8 @@ function shuffler(){
         }
         
     }
+    
+    startGame();
 }
 
 function swapEmpty(tile){
@@ -177,9 +185,10 @@ function swapEmpty(tile){
 }
 
 "use strict";
+var EMPTY = 15;
 var startTime, endTime;
 var moves = 0;
 var bgm = new Audio("bgm.mp3");
 var POSITIONS = [];
 window.onload = init;
-//highlight();
+highlight();
