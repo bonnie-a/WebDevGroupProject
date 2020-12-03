@@ -83,16 +83,16 @@ function isMovable(tile) {
 	var moveUp = pos - 4;
 	var moveDown = pos + 4;
     
-    /*for (var i in POSITIONS)  {
+    for (var i in POSITIONS)  {
         console.log("index " + i);
         console.log("id " + POSITIONS[i].id);
-    }*/
+    }
     
     if (moveRight < 16 && POSITIONS[moveRight].id == "empty" && pos != 3 && pos != 7 && pos != 11 && pos != 15) {
         alert("right");
         movable = true;
     }
-    else if (moveLeft > 0 && POSITIONS[moveLeft -1].id == "empty"  && pos != 1 && pos != 5 && pos != 9 && pos != 13) {
+    else if (moveLeft > 0 && POSITIONS[moveLeft].id == "empty"  && pos != 0 && pos != 4 && pos != 8 && pos != 12) {
         alert("left");
         movable = true;
     }
