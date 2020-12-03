@@ -58,7 +58,7 @@ h1,h2 {
 	background-image: url(images/background.png);
 }
 
-.tile:hover {
+.movable:hover {
 	border-color: red;
 	text-decoration: underline;
 	color: #006600;

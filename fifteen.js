@@ -10,6 +10,10 @@ function endGame() {
 	document.getElementById("moves").innerHTML = moves + " moves";
 }
 
+/**
+ * switches two tiles
+ * @param {HTML DOM element} the tile which is being moved
+ */
 function move(tile) {
     //collect clicked tile info
     var num = tile.innerHTML;
@@ -33,18 +37,80 @@ function move(tile) {
     //change positions in the array
     POSITIONS[objPos] = document.getElementById("empty");
     POSITIONS[emptyPos] = tile;
+    
+    //highlight();
 }
 
+/**
+ * highlights movable tiles
+ */
+function highlight() {
+    for (var i = 0; i < POSITIONS.length; i++){
+        if (isMovable(POSITIONS[i])) {
+            POSITIONS[i].style.className = "tile movable";
+        }
+        else {
+            POSITIONS[i].style.className = "tile";
+        }
+    }
+}
+
+/**
+ * called when the user clicks a tile, checks to see if tile is movable and then moves it if so
+ */
 function select() {
     //check if tile is movable
-
-    //move the tiles
-    move(this);
-    moves++;
+    if (isMovable(this)) {
+        //move the tiles
+        move(this);
+        moves++;
+    }
     
     //check if game is finished
 }
 
+/**
+ * Checks to see if a tile is movable
+ * @param {HTML DOM element} the tile that is being moved
+ */
+function isMovable(tile) {
+    var movable = false;
+    var emp = POSITIONS.findIndex(element => element.id == "empty");
+    
+    var pos = POSITIONS.findIndex(element => element.id == tile.id) + 1;
+	var moveRight = pos + 1;
+    var moveLeft = pos - 1;
+	var moveUp = pos - 4;
+	var moveDown = pos + 4;
+    
+    /*for (var i in POSITIONS)  {
+        console.log("index " + i);
+        console.log("id " + POSITIONS[i].id);
+    }*/
+    
+    if (moveRight < 16 && POSITIONS[moveRight].id == "empty" && pos != 3 && pos != 7 && pos != 11 && pos != 15) {
+        alert("right");
+        movable = true;
+    }
+    else if (moveLeft > 0 && POSITIONS[moveLeft -1].id == "empty"  && pos != 1 && pos != 5 && pos != 9 && pos != 13) {
+        alert("left");
+        movable = true;
+    }
+    else if (moveUp > 0 && POSITIONS[moveUp].id == "empty" && ((pos % 2) != (moveUp % 2))) {
+        alert("up");
+        movable = true;
+    }
+    else if (moveDown < 16 && POSITIONS[moveDown].id == "empty" && ((pos % 2) != (moveUp % 2))) {
+        alert("down");
+        movable = true;
+    }
+    
+    return movable;
+}
+
+/**
+ * Initializes the tiles.
+ */
 function init(){
     //add listeners
     tiles = document.getElementsByClassName('tile');
@@ -59,8 +125,10 @@ function init(){
     POSITIONS = Array.from(POSITIONS);
 }
 
+"use strict";
 var startTime, endTime;
 var moves = 0;
 var bgm = new Audio("bgm.mp3");
 var POSITIONS = [];
 window.onload = init;
+//highlight();
