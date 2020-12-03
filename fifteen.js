@@ -155,7 +155,7 @@ function shuffler(){
         
         while(test === false){
             random = Math.floor(Math.random() * 4); 
-            if(typeof tiles[random] != 'undefined'){
+            if(typeof tiles[squares[random]] != 'undefined'){
                 num = squares[random];
                 swapEmpty(tiles[num]);
                 pos = squares[random];
