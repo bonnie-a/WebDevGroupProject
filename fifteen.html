@@ -19,6 +19,20 @@
 		<p> Time : <span id="time"></span><br>
 			Moves : <span id="moves"></span>
 		</p>
+		
+		<div id="congratz">
+			<script>
+			for(var i=0; i<24; i++) {
+				document.write("<span></span>");
+			}
+			</script>
+			<h2> Congratulations! You ended the quzzle </h2>
+			<script>
+			for(var i=0; i<24; i++) {
+				document.write("<span></span>");
+			}
+			</script>
+		</div>
 
 		<div class="area">
 			<div class="puzzle">
@@ -29,7 +43,7 @@
 			</div>
 			
             <div id="button">
-                <button onclick="startGame()" id="shuffle">Shuffle</button>
+                <button onclick="shuffler()" id="shuffle">Shuffle</button>
 			</div>
 			
 			<div id="button">
