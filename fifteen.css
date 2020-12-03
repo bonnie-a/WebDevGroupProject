@@ -58,6 +58,19 @@ h1,h2 {
 	background-image: url(images/background.png);
 }
 
+.movable {
+	text-align: center;
+	vertical-align: middle;
+    height: 96px;
+    width: 96px;
+    border: 2px solid black;
+    font-size: 32pt;
+    font-family: sans-serif;
+	background-size: 400px 400px;
+	background-image: url(images/background.png);
+	
+}
+
 .movable:hover {
 	border-color: red;
 	text-decoration: underline;

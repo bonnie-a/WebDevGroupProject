@@ -58,11 +58,17 @@ function move(tile) {
 function highlight() {
     for (var i = 0; i < POSITIONS.length; i++){
         if (isMovable(POSITIONS[i])) {
-            POSITIONS[i].style.className = "tile movable";
+            //POSITIONS[i].style.className = "movable";
+            POSITIONS[i].style.borderColor = "red";
+            POSITIONS[i].style.color = "#006600";
+            POSITIONS[i].style.textDecoration = "underline";
         }
         else {
-            POSITIONS[i].style.className = "tile";
+            POSITIONS[i].style.borderColor = "black";
+            POSITIONS[i].style.color = "black";
+            POSITIONS[i].style.textDecoration = "none";
         }
+        console.log(POSITIONS[i].style.className);
     }
 }
 
@@ -98,12 +104,11 @@ function isMovable(tile) {
         console.log("id " + POSITIONS[i].id);
     }*/
     
-    console.log("right " + moveRight);
+    /*console.log("right " + moveRight);
     console.log("left " + moveLeft);
     console.log("up " + moveUp);
-    console.log("down " + moveDown);
+    console.log("down " + moveDown);*/
     
-    alert(EMPTY);
     if (moveRight < 16 && moveRight == EMPTY && pos != 3 && pos != 7 && pos != 11 && pos != 15) {
         movable = true;
     }
@@ -135,6 +140,8 @@ function init(){
     //create position array (should be updated after shuffle)
     POSITIONS = document.getElementsByClassName('tile');
     POSITIONS = Array.from(POSITIONS);
+    
+    highlight();
 }
 
 
@@ -191,4 +198,3 @@ var moves = 0;
 var bgm = new Audio("bgm.mp3");
 var POSITIONS = [];
 window.onload = init;
-highlight();
